@@ -1,0 +1,61 @@
+﻿@model Movie
+@{
+    ViewData["Title"] = "Movie Submission";
+}
+
+<h1>Movie Submission</h1>
+
+<form method="post" class="container mt-4">
+    <div class="mb-3">
+        <label asp-for="movieTitle" class="form-label">Title</label>
+        <input asp-for="movieTitle" class="form-control"/>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="movieCategory" class="form-label">Category</label>
+        <input asp-for="movieCategory" class="form-control"/>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="movieDirector" class="form-label">Director</label>
+        <input asp-for="movieDirector" class="form-control"/>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="movieYear" class="form-label">Year</label>
+        <input asp-for="movieYear" class="form-control"/>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="movieRating" class="form-label">Movie Rating</label>
+        <select asp-for="movieRating" class="form-select">
+            <option value="G">G</option>
+            <option value="PG">PG</option>
+            <option value="PG13">PG-13</option>
+            <option value="R">R</option>
+            @* <option value="NR">Not/Un-Rated</option> *@
+            @* <option value="TV">Other/TV</option> *@
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="movieLentTo" class="form-label">Lent To</label>
+        <input asp-for="movieLentTo" class="form-control"/>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="movieEdited" class="form-label">Movie Edited?</label>
+        <select asp-for="movieEdited" class="form-select">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="movieNotes" class="form-label">Notes</label>
+        <textarea asp-for="movieNotes" class="form-control" rows="2" maxlength="25"></textarea>
+        <small class="text-muted">Max 25 characters.</small>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">Submit Application</button>
+</form>
