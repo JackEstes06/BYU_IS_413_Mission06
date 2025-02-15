@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mission06_Estes")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+392ceae54c149573d595eebb2dee62862d3cb7ad")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+44f6787f61ea86d1f863b21111cca2555c75ba87")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mission06_Estes")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mission06_Estes")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
