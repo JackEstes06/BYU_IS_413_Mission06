@@ -37,4 +37,10 @@ public class HomeController : Controller
         _context.SaveChanges();
         return View();
     }
+    
+    [HttpGet]
+    public IActionResult MoviesList()
+    {
+        return View();
+    }
 }
