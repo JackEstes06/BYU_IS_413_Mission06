@@ -6,6 +6,8 @@ namespace Mission06_Estes.Models;
 
 public class Movie
 {
+    private static readonly int CurrentYear = DateTime.Today.Year;
+    
     [Key]
     [Required]
     public int MovieId { get; set; }
@@ -17,10 +19,10 @@ public class Movie
         
     [Required]
     public string Title { get; set; }
-    
+
     [Required]
-    [Range(1888, int.MaxValue)]
-    public int Year { get; set; }
+    [Range(1888, int.MaxValue, ErrorMessage = $"You must enter a year between 1888 and the {nameof(CurrentYear)}")]
+    public int Year { get; set; } = 1888;
     
     [Required]
     public string Rating { get; set; }
