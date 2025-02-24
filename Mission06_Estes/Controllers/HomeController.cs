@@ -27,20 +27,34 @@ public class HomeController : Controller
     [HttpGet]
     public IActionResult Movies()
     {
+        ViewBag.Categories = _context.Categories.ToList();
         return View();
     }
     [HttpPost]
     public IActionResult Movies(Movie response)
     {
-        // Add record to database
-        _context.Movies.Add(response);
-        _context.SaveChanges();
-        return View();
+        if (ModelState.IsValid)
+        {
+            // Add record to database
+            _context.Movies.Add(response);
+            _context.SaveChanges();
+
+            // ViewBag.Categories = _context.Categories.ToList();
+            return View("Index");
+        }
+        else
+        {
+            ViewBag.Categories = _context.Categories.ToList();
+            return View(response);
+        }
     }
     
     [HttpGet]
     public IActionResult MoviesList()
     {
-        return View();
+        var movies = _context.Movies.ToList();
+        Console.WriteLine(movies);
+        
+        return View(movies);
     }
 }

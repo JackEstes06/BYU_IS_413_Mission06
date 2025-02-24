@@ -1,6 +1,42 @@
-﻿@model Movie
+﻿@model List<Movie>
 @{
     ViewData["Title"] = "Movie List";
 }
 
 @* TODO add html & show movies *@
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <td>Title</td>
+        <td>Category</td>
+        <td>Year</td>
+        <td>Director</td>
+        <td>Rating</td>
+        <td>Lent To</td>
+        <td>Edited</td>
+        <td>Copied To Plex</td>
+        <td>Notes</td>
+        <td>Edit</td>
+        <td>Delete</td>
+    </tr>
+    </thead>
+    
+    @foreach(Movie movie in Model)
+    {
+        <tbody>
+        <tr>
+            <td>@movie.Title</td>
+            <td>@movie.category</td>
+            <td>@movie.Year</td>
+            <td>@movie.Director</td>
+            <td>@movie.Rating</td>
+            <td>@movie.LentTo</td>
+            <td>@movie.Edited</td>
+            <td>@movie.CopiedToPlex</td>
+            <td>@movie.Notes</td>
+            <td><a class="btn btn-info">Edit</a></td>
+            <td><a class="btn btn-danger">Delete</a></td>
+        </tr>
+        </tbody>
+    }
+</table>

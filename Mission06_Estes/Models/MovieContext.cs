@@ -12,4 +12,5 @@ public class MovieContext: DbContext
     
     // This helps build our database table when migrating
     public DbSet<Movie> Movies { get; set; }
+    public DbSet<Category> Categories { get; set; }
 }
