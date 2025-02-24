@@ -24,11 +24,12 @@ public class HomeController : Controller
         return View();
     }
     
+    // MOVIES VIEW ACTIONS
     [HttpGet]
     public IActionResult Movies()
     {
         ViewBag.Categories = _context.Categories.ToList();
-        return View();
+        return View(new Movie());
     }
     [HttpPost]
     public IActionResult Movies(Movie response)
@@ -49,6 +50,7 @@ public class HomeController : Controller
         }
     }
     
+    // MOVIESLIST VIEW ACTIONS
     [HttpGet]
     public IActionResult MoviesList()
     {
@@ -56,5 +58,42 @@ public class HomeController : Controller
         Console.WriteLine(movies);
         
         return View(movies);
+    }
+
+    // EDIT ACTIONS -> UTILIZE MOVIES VIEW SUBMISSION
+    [HttpGet]
+    public IActionResult Edit(int id)
+    {
+        Movie movieToEdit = _context.Movies.Single(x => x.MovieId == id);
+        
+        ViewBag.Categories = _context.Categories.ToList();
+        return View("Movies", movieToEdit);
+    }
+
+    [HttpPost]
+    public IActionResult Edit(Movie movie)
+    {
+        _context.Update(movie);
+        _context.SaveChanges();
+        
+        return RedirectToAction("MoviesList");
+    }
+    
+    // DELETE VIEW ACTIONS
+    [HttpGet]
+    public IActionResult Delete(int id)
+    {
+        Movie movieToDelete = _context.Movies.Single(x => x.MovieId == id);
+        
+        return View(movieToDelete);
+    }
+
+    [HttpPost]
+    public IActionResult Delete(Movie movie)
+    {
+        _context.Movies.Remove(movie);
+        _context.SaveChanges();
+        
+        return RedirectToAction("MoviesList");
     }
 }

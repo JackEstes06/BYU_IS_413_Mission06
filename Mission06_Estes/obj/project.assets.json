@@ -2421,32 +2421,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jacke\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/Users/jackestes/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jacke\\RiderProjects\\BYU_IS413\\Missions\\Mission06_Estes\\Mission06_Estes\\Mission06_Estes.csproj",
+      "projectUniqueName": "/Users/jackestes/Documents/Current Semester/IS_413/Missions/Mission06_Estes/Mission06_Estes/Mission06_Estes.csproj",
       "projectName": "Mission06_Estes",
-      "projectPath": "C:\\Users\\jacke\\RiderProjects\\BYU_IS413\\Missions\\Mission06_Estes\\Mission06_Estes\\Mission06_Estes.csproj",
-      "packagesPath": "C:\\Users\\jacke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jacke\\RiderProjects\\BYU_IS413\\Missions\\Mission06_Estes\\Mission06_Estes\\obj\\",
+      "projectPath": "/Users/jackestes/Documents/Current Semester/IS_413/Missions/Mission06_Estes/Mission06_Estes/Mission06_Estes.csproj",
+      "packagesPath": "/Users/jackestes/.nuget/packages/",
+      "outputPath": "/Users/jackestes/Documents/Current Semester/IS_413/Missions/Mission06_Estes/Mission06_Estes/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\jacke\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/jackestes/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2510,7 +2502,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/Users/jackestes/.dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

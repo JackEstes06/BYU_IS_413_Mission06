@@ -1,0 +1,23 @@
+@{
+}
+
+@model Movie
+
+<h2>Confirm Deletion</h2>
+<h3>Movie to Delete: @Model.Title</h3>
+<h4>Directed By: @Model.Director</h4>
+<h4>Movie Details:</h4>
+<p>
+    Year Released: @Model.Year<br/>
+    Rating: @Model.Rating<br/>
+    On Plex Server?: @(Model.CopiedToPlex == 1 ? "Yes" : "No")<br/>
+    Lent To: @(Model.LentTo == "" ? "Nobody" : Model.LentTo)<br/>
+    Notes: @(Model.Notes == "" ? "NONE" : Model.Notes)
+</p>
+
+<form method="post">
+    <input type="hidden" asp-for="@Model.MovieId"/>
+
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a class="btn btn-info" asp-controller="Home" asp-action="MoviesList">Cancel</a>
+</form>
